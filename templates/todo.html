@@ -51,31 +51,26 @@
     </nav>
   </header>
 
-<div class="container-fluid">
-  <form class="" action="login.html" method="post">
-    <button type="submit" class="btn btn-primary mb-4">logout</button>
+<div align="right" class="container-fluid my-1">
+  <form class="" action="/login" method="post">
+    <button type="submit" class="btn btn-danger mb-4">Logout</button>
   </form>
-
-    <!-- title:Your todo -->
-    <div class="text-center">
-      <h1>Your Todo</h1>
-    </div>  
 </div>
 
   <div class="container-fluid text-center py-1">
     <div class="row">
       <!-- Left side: new todo -->
       <div class="col-md-3 border rounded">
-        <h2>New Todo</h2>
-        <form>
+        <h2>Entry</h2>
+        <form action="/todo" method="post">
           <div class="form-group">
             <label for="InputTitle">Title</label>
-            <input type="text" class="form-control" id="InputTodo" placeholder="send a e-mail to Bob">
+            <input type="text" class="form-control" id="title" name="title" placeholder="send a e-mail to Bob">
           </div>
 
           <div class="form-group">
             <label for="exampleSelect1exampleFormControlSelect1">Priority</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="priority" name="priority">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -90,7 +85,7 @@
             <label class="control-label">Deadline</label>
             <div class="form-group">
               <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
-                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" placeholder="month/day/year"/>
+                <input type="text" class="form-control datetimepicker-input" id="deadline_date" name="deadline_date" data-target="#datetimepicker4" placeholder="month/day/year"/>
                 <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
                   <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                 </div>
@@ -109,7 +104,7 @@
           <div class="container">
             <div class="form-group">
               <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
-                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" placeholder="hour:minute AM or PM"/>
+                <input type="text" class="form-control datetimepicker-input" id="deadline_time" name="deadline_time" data-target="#datetimepicker3" placeholder="hour:minute AM or PM"/>
                 <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
                   <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
                 </div>
@@ -128,7 +123,7 @@
 
           <div class="form-group">
             <label for="exampleInputPassword1">Time Required (hour : minute)</label>
-            <input type="time" class="form-control" id="exampleInputPassword1" placeholder="60">
+            <input type="time" class="form-control" id="time_req" name="time_req">
           </div>
 
           <button type="submit" class="btn btn-primary mb-4">save</button>
