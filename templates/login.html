@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ToDoアプリ</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <!-- bootstrap datapicker. In this, for calender -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+
+  <style type="text/css">
+  .datepicker-days th.dow:first-child,
+  .datepicker-days td:first-child {
+    color: #f00;
+  }
+  .datepicker-days th.dow:last-child,
+  .datepicker-days td:last-child {
+    color: #00f;
+  }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#751521;">
+      <a class="navbar-brand" href="#">
+        <img src="" width="60" height="30" alt=""> Todo
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://storage.googleapis.com/edd-homepage/IntroductionEdD/who.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://storage.googleapis.com/edd-homepage/IntroductionEdD/products.html">Other Services</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid text-center py-3">
+    <div class="row">
+      <!-- left -->
+      <div class="col-md-3"></div>
+      <!-- center -->
+      <div class="col-md-6">
+        <form class="" action="/todo" method="post">
+          <input class="form-control" type="text" id="user_mail" name="user_mail" value="" placeholder="Mail address">
+          <input class="form-control my-3" type="password" id="user_pass" name="user_pass" value="" placeholder="Password">
+          <button class="btn btn-secondary my-3" type="button" name="button">Login</button>
+        </form>
+      </div>
+      <!-- right -->
+      <div class="col-md-3">
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <footer class="">
+    <div class="text-center text-white">
+      <p>&#169;2018 Ed.D.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

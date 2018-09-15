@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ToDoアプリ</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <!-- bootstrap datapicker. In this, for calender -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+
+  <style type="text/css">
+  .datepicker-days th.dow:first-child,
+  .datepicker-days td:first-child {
+    color: #f00;
+  }
+  .datepicker-days th.dow:last-child,
+  .datepicker-days td:last-child {
+    color: #00f;
+  }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#751521;">
+      <a class="navbar-brand" href="#">
+        <img src="" width="60" height="30" alt=""> Todo
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://storage.googleapis.com/edd-homepage/IntroductionEdD/who.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://storage.googleapis.com/edd-homepage/IntroductionEdD/products.html">Other Services</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<div class="container-fluid">
+  <form class="" action="login.html" method="post">
+    <button type="submit" class="btn btn-primary mb-4">logout</button>
+  </form>
+
+    <!-- title:Your todo -->
+    <div class="text-center">
+      <h1>Your Todo</h1>
+    </div>  
+</div>
+
+  <div class="container-fluid text-center py-1">
+    <div class="row">
+      <!-- Left side: new todo -->
+      <div class="col-md-3 border rounded">
+        <h2>New Todo</h2>
+        <form>
+          <div class="form-group">
+            <label for="InputTitle">Title</label>
+            <input type="text" class="form-control" id="InputTodo" placeholder="send a e-mail to Bob">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleSelect1exampleFormControlSelect1">Priority</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <small class="text-muted">1:Low priority ~ 5:High priority</small>
+          </div>
+
+
+          <div class="container">
+            <label class="control-label">Deadline</label>
+            <div class="form-group">
+              <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" placeholder="month/day/year"/>
+                <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+            $(function () {
+              $('#datetimepicker4').datetimepicker({
+                format: 'L'
+              });
+            });
+            </script>
+          </div>
+
+
+          <div class="container">
+            <div class="form-group">
+              <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" placeholder="hour:minute AM or PM"/>
+                <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                  <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                </div>
+              </div>
+            </div>
+
+            <script type="text/javascript">
+            $(function () {
+              $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+              });
+            });
+            </script>
+
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Time Required (hour : minute)</label>
+            <input type="time" class="form-control" id="exampleInputPassword1" placeholder="60">
+          </div>
+
+          <button type="submit" class="btn btn-primary mb-4">save</button>
+        </form>
+
+      </div> <!-- close new todo  -->
+
+      <!-- Right side: Todo list -->
+      <div class="col-md-9 border rounded"> <!-- todo list -->
+        <h2>Todo List</h2>
+        <label>Latest-load:</label>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Todo</th>
+              <th>Deadline</th>
+              <th>Remaining</th>
+              <th>Required</th>
+              <th>Check</th>
+              <th>##</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Writing</td>
+              <td>2018-09-13-16:00</td>
+              <td>残り</td>
+              <td>所要時間</td>
+              <td>チェックボタン</td>
+              <td><button type="button" class="btn btn-secondary rounded-circle p-0" style="width:2rem;height:2rem;">･･･</button></td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>E-mail</td>
+              <td>2018-09-14-18:00</td>
+              <td>残り</td>
+              <td>所要時間</td>
+              <td>チェックボタン</td>
+              <td><button type="button" class="btn btn-secondary rounded-circle p-0" style="width:2rem;height:2rem;">･･･</button></td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>E-mail</td>
+              <td>2018-09-14-18:00</td>
+              <td>残り</td>
+              <td>所要時間</td>
+              <td>チェックボタン</td>
+              <td><button type="button" class="btn btn-secondary rounded-circle p-0" style="width:2rem;height:2rem;">･･･</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>    <!--close todo list-->
+
+    </div>   <!--close row-->
+  </div>    <!--close container-->
+
+  <footer class="">
+    <div class="text-center text-white">
+      <p>&#169;2018 Ed.D.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
